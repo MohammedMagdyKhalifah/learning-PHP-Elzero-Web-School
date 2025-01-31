@@ -76,6 +76,135 @@
 
     endif;
 
+
+    // Nested If And Advanced Practice lesson 34
+    echo "Nested If And Advanced Practice lesson 34";
+    echo "<br>";
+    $name = "Osama";
+    $is_student = true;
+    $is_orphan = true;
+    $country = "Egypt";
+    $country_discount=50;
+    $price=100;
+    $student_discount=10;
+    $orphan_discount=15;
+
+    if($country=="Egypt"){
+        if($is_student == true){
+            if($is_orphan==true){
+                echo "Hello $name";
+                echo "<br>";
+                echo "country discount $country_discount";
+                echo "<br>";
+                echo "student discount $student_discount";
+                echo "<br>";
+                echo "orphan discount $orphan_discount";
+                echo "<br>";
+                echo "the final price is ".$price-$country_discount-$student_discount-$orphan_discount;
+            }else{
+                echo "Hello $name";
+                echo "<br>";
+                echo "country discount $country_discount";
+                echo "<br>";
+                echo "student discount $student_discount";
+                echo "<br>";
+                echo "the final price is ".$price-$country_discount-$student_discount;
+            }
+        } else {
+            echo "Hello $name";
+            echo "<br>";
+            echo "country discount $country_discount";
+            echo "<br>";
+            echo "the final price is ".$price-$country_discount;
+        }
+    }else{
+        echo "Hello $name";
+        echo "<br>";
+        echo "No discount";
+        echo "<br>";
+        echo "the final price is $price";
+    }
+    echo "<br>";
+    echo "<br>";
+
+    // Ternary Conditional Operator lesson 35
+    echo "Ternary Conditional Operator lesson 35";
+    echo "<br>";
+    
+    echo (10>5)? "Good":"Bad";
+    echo "<br>";
+
+    echo "I Love PHP Because It's A ".((10>5)?"Good":"Bad")." Language";
+    echo "<br>";
+    $result = 10>5?"Good":"Bad";
+    echo "I Love PHP Because It's A $result Language";
+    echo "<br>";
+
+    // Switch lesson 36
+    echo "Switch lesson 36";
+    echo "<br>";
+
+    $day = "Sat";
+    switch($day){
+        case "Sat":
+            echo "Hello Today is $day, we are open from 10:16";
+            break;
+        case "Sun":
+            echo "Hello Today is $day, we are open from 10:18";
+            break;
+        case "Mon": 
+        case "Thu":
+            echo "Hello Today is $day, we are open from 08:12";
+            break;
+        default : 
+            echo "Unknown Day";
+    }
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+
+
+    // 1  2 
+    $a = 200;
+    $b = 200;
+    $c = 100;
+
+    /*
+    Check That:
+    Variable "b" Larger Than Variable "a"
+    Variable "a" Identical To Variable "c"
+    Variable "a" Plus Variable "c" Identical To Variable "b"
+    */
+
+    if($b>$a){
+        if($a==$c){
+            if($a+$c==$b)
+                echo "Yes";
+        }elseif($c>$a){
+            echo "A Is Not Larger Than B Or C";
+
+        }
+    }else{
+        echo "A larger than or equal B";
+        echo "<br>";
+    }
+    if($a>$c){
+        echo "A larger than C";
+    }
+    echo "<br>";
+    echo "<br>";
+
+    // 2
+
+
+
+
+    
+
+
+    
+
     ?>
     <!DOCTYPE html>
     <html lang="en">
