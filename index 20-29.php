@@ -166,7 +166,125 @@
     // Operator Precedence lesson 29
     echo "Operator Precedence lesson 29";
     echo "<br>";
+    $f = true and false;
+    echo "f => $f"; // true
+    echo "<br>";
 
-    
+    $h = true & false ;
+    echo "h => $h"; // false
+    echo "<br>";
+    var_dump(true && false);
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+
+
+
+    // 1
+    // Replace ? With Arithmetic Operators
+    echo 10 - 20 * 15 / 3 + 190 + 10 - 400; // Output: 0
+    echo "<br>";
+  
+    // 2
+    $a = "10";
+    echo +$a;
+    echo "<br>";
+    echo gettype(+$a);
+    echo "<br>";
+
+    $a = "10";
+    echo $a+0;
+    echo "<br>";
+    echo gettype(+$a+0);
+    echo "<br>";
+
+    $a = "10";
+    echo (int)$a;
+    echo "<br>";
+    echo gettype((int)$a);
+    echo "<br>";
+    echo "<br>";
+
+    // 3
+    $a = 10;
+    $b = 20;
+    echo $a<=>$b;
+    echo "<br>";
+    echo "<br>";
+
+    // 4
+    $a = 10;
+    $b = 20;
+    $c = 15;
+
+    var_dump($a && $b); // True
+    var_dump($c > $a); // True
+    var_dump($a and $b); // True
+    var_dump($a or $b); // True
+    var_dump($a < $c); // True
+    var_dump($a <= $c); // True
+    var_dump(gettype($a) || gettype($b)); // True
+    // var_dump(gettype($a) ? gettype($b)); // True
+    var_dump(gettype((float) $a) or gettype($b)); // True
+    echo "<br>";
+    echo "<br>";
+
+    // 5
+    $points = 10;
+
+    // Write Your Code Here
+    $points+=(int)($points/3);
+
+    echo $points; // 13
+    echo "<br>";
+
+    // Write Your Code Here
+    $points -= ceil($points/3);
+
+    echo $points; // 8;
+    echo "<br>";
+    echo "<br>";
+
+    // 6
+    $a = "Elzero";
+    $b = "Web";
+    $c = "School";
+
+    // Method One
+    $d = $a." ".$b." ".$c;
+    echo $d;
+    echo "<br>";
+
+    // Method Two
+    $d = "$a $b $c";
+    echo $d;
+    echo "<br>";
+
+    // Method Three
+    $d = sprintf("%s %s %s", $a, $b, $c);
+    echo $d;
+    echo "<br>";
+    // Method Four
+    $d = join(" ", [$a, $b, $c]);
+    echo $d;
+    echo "<br>";
+    echo "<br>";
+
+    // 7
+    $a = 46;
+    $b = 54;
+
+    echo $a + $b * $a + $b + $a * $a * $a; // 10000
+
+    // 8
+    // Code 1
+    $a = $b;
+
+    // Code 2
+    $f = file("Not_A_File")or die("Custom Error");
+
+    // Code 3
+    @include("Not_A_File")or die("Custom Error");
+
 
 
