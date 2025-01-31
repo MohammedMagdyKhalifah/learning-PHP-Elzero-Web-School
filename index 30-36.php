@@ -46,13 +46,19 @@
     echo "If, Elseif, Else - Advanced Practice lesson 32";
     echo "<br>";
 
-    // if($_SERVER['REQUEST_METHOD']==="POST"){
+    if($_SERVER['REQUEST_METHOD']==="POST"){
         echo "username => ".$_POST["username"];
         echo "<br>";
         echo "lang => ".$_POST["lang"];
         echo "<br>";
-
-    // }
+        if($_POST["lang"]=="ar"){
+            header("Location: ar.php");
+            exit();
+        }elseif($_POST["lang"]=="en"){
+            header("Location: en.php");
+            exit();
+        }
+    }
     ?>
     <!DOCTYPE html>
     <html lang="en">
