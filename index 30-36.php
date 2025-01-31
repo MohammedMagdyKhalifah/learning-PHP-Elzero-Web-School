@@ -45,6 +45,8 @@
     // If, Elseif, Else - Basics lesson 32
     echo "If, Elseif, Else - Advanced Practice lesson 32";
     echo "<br>";
+    echo "<br>";
+
 
     if($_SERVER['REQUEST_METHOD']==="POST"){
         echo "username => ".$_POST["username"];
@@ -59,6 +61,21 @@
             exit();
         }
     }
+
+    // If, Elseif, Else - Alternate Syntax lesson 33
+    echo "If, Elseif, Else - Alternate Syntax lesson 33";
+    echo "<br>";
+
+    if(10>5) echo "10 > 5";
+    echo "<br>";
+    echo "<br>";
+
+    if(10>5) : 
+        echo "10 > 5";
+        echo "<br>";
+
+    endif;
+
     ?>
     <!DOCTYPE html>
     <html lang="en">
