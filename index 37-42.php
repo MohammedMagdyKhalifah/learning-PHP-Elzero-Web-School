@@ -78,4 +78,34 @@
             break;
         }
     }
+    echo "<br>continue <br>";
+    foreach($countries as $country){
+        
+        if($country=="USA"){
+            continue;
+        }
+        echo "$country<br>";
+    }
+
+    echo "<br>";
+    echo "<br>";
+
+    // Include And Require lesson 42
+    // echo "Include And Require lesson 42";
+    // echo "<br>";
+    // include("test.php"); // $a = 10;
+    // echo $a ."<br>";
+    // echo "continue";
+
+    // include("tests.php"); // wrong name
+    // echo $a ."<br>";
+    // echo "continue";
+
+    require("tests.php"); // $a = 10; If it's not exists, it will make an error and stop the code
+    echo $a ."<br>";
+    echo "continue";
+
+
+
+
 
