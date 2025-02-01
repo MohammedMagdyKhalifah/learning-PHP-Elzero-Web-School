@@ -104,6 +104,7 @@
     require("test.php"); // $a = 10; If it's not exists, it will make an error and stop the code
     echo $a ."<br>";
     echo "continue";
+    echo "<br>";
 
 
 
@@ -116,6 +117,8 @@
         $result = ($result * 2) + 2; // تطبيق القاعدة الحسابية
         $num *= 2; // تحديث قيمة $num ليتوافق مع الشرط الموجود
     }
+    echo "<br>";
+    echo "<br>";
 
     // Needed Output
     // 1
@@ -128,4 +131,45 @@
     // 382
 
 
+    // 4
+    $start = 10;
+    $end = 0;
+    $stop = 3;
+    $result = $start;
+    while($result>=$stop){
+        if($result<$start){
+            echo $end;
+        }
+        echo $result."<br>";
+        $result--;
+    }
 
+    echo "<br>";
+    echo "<br>";
+
+
+    // Needed Output
+    // 10
+    // 09
+    // 08
+    // 07
+    // 06
+    // 05
+    // 04
+    // 03
+
+    // 6
+    $start = 0;
+    $mix = [1, 2, 3, "A", "B", "C", 4];
+
+    for ($i = $start; $i < count($mix); $i++) {
+        if (is_numeric($mix[$i]) && $mix[$i] != $mix[$start]) { // التأكد أنه رقم وليس 1
+            echo $mix[$i] . "<br>";
+        }
+    }
+
+    $money = ["Ahmed" => 100, "Sayed" => 150, "Osama" => 100, "Maher" => 250];
+
+    foreach ($money as $name => $amount) {
+        echo "The Name Is $name And I Need $amount Pound From Him<br>";
+    }
