@@ -82,7 +82,7 @@
         // return $result;
 
         $result=0;
-        foreach($nums() as $num){
+        foreach($nums as $num){
             $result+=$num;
         }
         return $result;
