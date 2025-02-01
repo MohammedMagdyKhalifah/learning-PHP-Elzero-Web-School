@@ -39,7 +39,26 @@
     deep_freezer("Mohammed");
 
 
-    // 
+    // Function Return And Echo lesson 45
+    echo "Function Return And Echo lesson 45<br>";
+    $prizes = ["PC", "Playstation", "XBOX", "Apple TV", "Laptop", "iPad", "iPhone"];
+    function get_number($num1,$num2){
+        return $num1+$num2;
+
+    }
+
+    $price_number = get_number(1,2);
+    echo $prizes[$price_number]."<br>";
+    echo "<br>";
+
+    // Function Default Parameter Value lesson 46
+    echo "Function Default Parameter Value 46<br>";
+    function get_data($country,$name,$age,$address){
+        $line1 = "Your country is $country And Your name is $name <br>";
+        $line2 = "Your Age is $age And You Live in $address <br>";
+    }
+    echo get_data("egypt","Mohammed",23,"Madinah");
+
 
 
 ?>
