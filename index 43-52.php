@@ -90,6 +90,29 @@
     echo calculate(10,20,10);
     echo "<br>";
 
+    // Function Training And Unpacking Arguments lesson 48
+    echo "Function Training And Unpacking Arguments lesson 48<br>";
+    echo "<br>";
+
+    function get_data2($name,$country="Private",...$skills){
+        echo "Hello $name , Your country is $country <br>";
+        foreach($skills as $skill){
+            echo "--- $skill<br>";
+        }
+    }
+    $my_skills = ["HTML","CSS","JAVA","PHP","Python"];
+
+    get_data2("Mohammed","Saudi",...$my_skills);
+
+    // Function Variable And Function Exists lesson 49
+
+    echo "Function Variable And Function Exists lesson 49<br>";
+
+    function one(){
+        return "one from function one";
+    }
+    $func1="one";
+    echo $func1()."<br>";
 
 
     
