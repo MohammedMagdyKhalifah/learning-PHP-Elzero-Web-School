@@ -20,6 +20,26 @@
         echo "Hello Mr. $one <br>";
     }
 
-    say_hello_to();
+    say_hello_to("Mohammed");
+
+    function deep_freezer($item){
+        if($item=="water")
+            echo "Make Ice <br>";
+        elseif ($item=="Coca Cola")
+            echo "Make It Cold <br>";
+        elseif ($item=="Fruit")
+            echo "Make It Fresh <br>";
+        else
+            echo "Unknown Item <br>";
+
+    }  
+    deep_freezer("water");
+    deep_freezer("Coca Cola");
+    deep_freezer("Fruit");
+    deep_freezer("Mohammed");
+
+
+    // 
+
 
 ?>
