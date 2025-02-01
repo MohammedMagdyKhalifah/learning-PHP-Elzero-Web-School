@@ -101,11 +101,31 @@
     // echo $a ."<br>";
     // echo "continue";
 
-    require("tests.php"); // $a = 10; If it's not exists, it will make an error and stop the code
+    require("test.php"); // $a = 10; If it's not exists, it will make an error and stop the code
     echo $a ."<br>";
     echo "continue";
 
 
+
+    // 3
+    $num = 2;
+    $result = 1; // أول رقم في السلسلة
+
+    while ($num < 520) {
+        echo $result . "<br>"; // طباعة الرقم الحالي
+        $result = ($result * 2) + 2; // تطبيق القاعدة الحسابية
+        $num *= 2; // تحديث قيمة $num ليتوافق مع الشرط الموجود
+    }
+
+    // Needed Output
+    // 1
+    // 4
+    // 10
+    // 22
+    // 46
+    // 94
+    // 190
+    // 382
 
 
 
