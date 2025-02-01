@@ -53,12 +53,46 @@
 
     // Function Default Parameter Value lesson 46
     echo "Function Default Parameter Value 46<br>";
-    function get_data($country,$name,$age,$address){
+    function get_data($country="Private country",$name="Private name",$age="Private age",$address = "Private Address"){
         $line1 = "Your country is $country And Your name is $name <br>";
         $line2 = "Your Age is $age And You Live in $address <br>";
+        return $line1.$line2;
     }
     echo get_data("egypt","Mohammed",23,"Madinah");
+    echo "<br>";
+    echo get_data("egypt","Mohammed",23);
+    echo "<br>";
+    echo get_data(name:"Mohammed Magdy Khalifah");
+    echo "<br>";
 
+    // Function Variable Arguments List lesson 47
+    echo "Function Variable Arguments List lesson 47<br>";
+    echo "<br>";
+
+    function calculate(...$nums){
+
+        // func_num_args();
+        // func_get_args($index);
+        // func_get_args();
+
+
+        // $result=0;
+        // foreach(func_get_args() as $num)
+        //     $result+=$num;
+        // return $result;
+
+        $result=0;
+        foreach($nums() as $num){
+            $result+=$num;
+        }
+        return $result;
+    }
+    echo calculate(10,20,10);
+    echo "<br>";
+
+
+
+    
 
 
 ?>
