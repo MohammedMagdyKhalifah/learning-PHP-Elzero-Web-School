@@ -180,5 +180,13 @@
 
     echo $f1()."<br>";
 
+    $age = 10;
+    $f2=fn() => "Your age is $age<br>"; // no need for use
+    echo $f2();
+    $adding10=array_map(fn($num1)=>$num1+10,[10,20,30,40]);
 
+    echo"<pre>";
+    print_r($adding10);
+    echo"</pre>";
+    
 ?>
