@@ -114,8 +114,71 @@
     $func1="one";
     echo $func1()."<br>";
 
+    if (function_exists(function: "onefd")){
+        echo one();
+    }else {
+        echo "مش موجودة<br>";
+    }
 
-    
+    // Passing Arguments By Reference And Return Type lesson 50
+    echo "Passing Arguments By Reference And Return Type lesson 50<br>";
+
+    function add5($num){
+        return $num+=5;
+    }
+    // echo add5(15)."<br>";
+    // $n = 15;
+    // echo add5($n)."<br>";
+    // echo $n."<br>";
+
+    function add10(&$num){
+        return $num+=10;
+    }
+    $n = 15;
+    echo add10($n)."<br>"; //25
+    echo "n = ".$n."<br>"; // 25
+
+    function calc($num1,$num2):int{
+        return $num1+$num2;
+    }
+    echo gettype(calc(10.5,.5)); // int
+    echo "<br>";
+    echo "<br>";
+
+    // Anonymous Function lesson 51
+    echo "Anonymous Function lesson 51<br>";
+
+    $age = 24;
+    $say_hi = function($someone) use ($age){
+        return "Hi $someone your age is $age";
+    };
+    echo $say_hi("Mohammed")."<br>";
+
+    // Pass Anonymous Function To Function => array_map
+    $num = [10,20,30,40,50];
+    function add20($item){
+        return $item+=20;
+    }
+    $num_after_adding= array_map("add20",$num);
+    echo"<pre>";
+    print_r($num_after_adding);
+    echo "</pre>";
+
+    $num_after_adding_ten= array_map(function($item){return $item+10;},$num);
+    echo"<pre>";
+    print_r($num_after_adding_ten);
+    echo "</pre>";
+
+
+
+
+    echo "<br>";
+    echo "<br>";
+    // Arrow Function lesson 52
+    echo "Arrow Function lesson 52<br>";
+    $f1 = fn()=> "Hello" ;
+
+    echo $f1."<br>";
 
 
 ?>
