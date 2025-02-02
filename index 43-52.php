@@ -178,7 +178,7 @@
     echo "Arrow Function lesson 52<br>";
     $f1 = fn()=> "Hello" ;
 
-    echo $f1."<br>";
+    echo $f1()."<br>";
 
 
 ?>
