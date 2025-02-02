@@ -1,8 +1,0 @@
-<?php 
-    // String Access And Update Elements lesson 53
-    echo "String Access And Update Elements lesson 53";
-
-    $str = "Mohammed";
-    echo "letter 3 is ".$str[2]."<br>";
-
-?>
