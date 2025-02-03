@@ -109,3 +109,60 @@ $counting = [
   if (array_key_exists("PHP", $courses)) {
     echo "The Course Is Found And The Price Is: " . $courses["PHP"]."<br>";
   }
+
+//   #065 - Array Functions Part 3 - 5 Functions
+    echo "#065 - Array Functions Part 3 - 5 Functions<br>";
+    $friends = ["Osama", "Ahmed", "Sameh", "Mahmoud", "Gamal", "Osama", "Eman", 1, "1"];
+    echo"<pre>friends";
+    print_r($friends);
+    echo"</pre>";
+    echo"<pre>array_keys(friends,Sameh)";
+    print_r(array_keys($friends,"Sameh"));
+    echo"</pre>";
+    echo"<pre>array_keys(friends,1)";
+    print_r(array_keys($friends,"1"));
+    echo"</pre>";
+    echo"<pre>array_keys(friends,1,true)";
+    print_r(array_keys($friends,"1",true));
+    echo"</pre>";
+
+    $pad = ["A", "B", "C", "D"];
+    echo"<pre>pad";
+    print_r($pad);
+    echo"</pre>";
+    
+    echo"<pre>array_pad(pad,10,@)";
+    print_r(array_pad($pad,10,"@"));
+    echo"</pre>";
+    echo"<pre>array_pad(pad,-10,@)";
+    print_r(array_pad($pad,-10,"@"));
+    echo"</pre>";
+
+    $product = [10, 5, 2, 10];
+    echo"<pre>product";
+    print_r($product);
+    echo"</pre>";
+
+    echo"array_product(product)".array_product($product)."<br>";
+    echo "array_sum(product) ".array_sum($product)."<br>";
+
+    // #066 - Current, Next, Prev, Reset, End
+    echo "#066 - Current, Next, Prev, Reset, End<br>";
+
+    $friends = ["Osama", "Ahmed", "Sameh", "Mahmoud", "Gamal", "Eman"];
+    echo"<pre>friends";
+    print_r($friends);
+    echo"</pre>";
+
+    echo "current(friends) ".current($friends) ."<br>";
+    echo "next(friends) ".next($friends) ."<br>";
+    echo "current(friends) ".current($friends) ."<br>";
+    echo "next(friends) ".next($friends) ."<br>";
+    echo "next(friends) ".next($friends) ."<br>";
+    echo "next(friends) ".next($friends) ."<br>";
+    echo "prev(friends) ".prev($friends) ."<br>";
+    echo "current(friends) ".current($friends) ."<br>";
+    echo "reset(friends) ".reset($friends) ."<br>";
+    echo "end(friends) ".end($friends) ."<br>";
+    
+
