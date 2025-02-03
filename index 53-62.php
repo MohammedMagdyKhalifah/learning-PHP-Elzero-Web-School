@@ -183,10 +183,36 @@
     echo strstr("Mohammed Magdy Khalifah","K")."<br>";
     echo strstr("Mohammed Magdy Khalifah","K",true)."<br>";
     
-    echo strstr("Mohammed Magdy Khalifah","k")."<br>";
+    echo stristr("Mohammed Magdy Khalifah","k")."<br>";
 
     echo 10_000_000 ."<br>";
 
+    echo number_format(10000000.123456)."<br>";
+    echo number_format(10000000.1234562,5,"..","-")."<br>";
+    echo "<br>";
+    echo "<br>";
+
+    // 1
+    $num_one = -1;
+    $num_two = 2.5;
+
+    $let_one = "o";
+    $let_two = "z";
+
+    $str = "El%er0";
+    $str[$num_one]=$let_one;
+    $str[$num_two]=$let_two;
+    
+
+    echo $str; // Elzero
+    echo "<br>";
+    echo "<br>";
+    // 2
+
+    $str = "Orezle";
+
+    echo str_ireplace($str ,$str,"Elzero")."<br>";
+    // Elzero
 
 
 
