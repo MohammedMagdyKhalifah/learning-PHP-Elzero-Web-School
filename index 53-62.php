@@ -178,6 +178,16 @@
 
     echo similar_text("61l2z3e4r5o5E","Elzero",$similar_percent)." $similar_percent <br>";
 
+    // String Functions - Part 9 - 3 Functions lesson 62
+    echo "String Functions - Part 9 - 3 Functions lesson 62<br>";
+    echo strstr("Mohammed Magdy Khalifah","K")."<br>";
+    echo strstr("Mohammed Magdy Khalifah","K",true)."<br>";
+    
+    echo strstr("Mohammed Magdy Khalifah","k")."<br>";
+
+    echo 10_000_000 ."<br>";
+
+
 
 
 
