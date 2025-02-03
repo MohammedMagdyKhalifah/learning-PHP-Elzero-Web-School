@@ -343,9 +343,55 @@ echo "#069 - Array Slice, Array Splice<br>";
     --- Length
     ------ Negative => Stop Removing Until This Index
     ------ Not Set => Remove All Elements From Start Position
-
   */
+
+  $chars = ["A", "B", "C", "D", "E", "F", "G"];
+  $chars_with_string_keys = ["A" => 1, "B" => 2, "C" => 3];
+  $chars_with_numeric_keys = [10 => 1, 20 => 2, 30 => 3];
+  echo '<pre>$chars';
+  print_r($chars);
+  echo '</pre>';
+  echo '<pre>$chars_with_string_keys';
+  print_r($chars_with_string_keys);
+  echo '</pre>';
+  echo '<pre>$chars_with_numeric_keys';
+  print_r($chars_with_numeric_keys);
+  echo '</pre>';
+
+  echo '<pre>array_slice($chars,2,3)';
+  print_r(array_slice($chars,2,3));
+  echo '</pre>';
+
+  echo '<pre>array_slice($chars_with_string_keys,2)';
+  print_r(array_slice($chars_with_string_keys,2));
+  echo '</pre>';
+
+  echo '<pre>array_slice($chars_with_string_keys,1,2)';
+  print_r(array_slice($chars_with_string_keys,1,2));
+  echo '</pre>';
+
+  echo '<pre>array_slice($chars_with_numeric_keys,1,2)';
+  print_r(array_slice($chars_with_numeric_keys,1,2));
+  echo '</pre>';
+
+  echo '<pre>array_slice($chars_with_numeric_keys,1,2,true)';
+  print_r(array_slice($chars_with_numeric_keys,1,2,true));
+  echo '</pre>';
+
+
+
+  $nums = [10, 20, 30, 40, 50, 60, 70];
+  echo '<pre>$nums';
+  print_r($nums);
+  echo '</pre>';  
+
+  echo '<pre>array_splice($nums,2,3)';
+  print_r(array_splice($nums,2,3));
+  echo '</pre>';
   
+  echo '<pre>$nums after splice => array_splice($nums,2,3)';
+  print_r($nums);
+  echo '</pre>';  
 
 
   
