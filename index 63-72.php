@@ -164,5 +164,191 @@ $counting = [
     echo "current(friends) ".current($friends) ."<br>";
     echo "reset(friends) ".reset($friends) ."<br>";
     echo "end(friends) ".end($friends) ."<br>";
-    
+
+
+    // #067 - Array Merge, Array Replace, Array Rand, Shuffle
+    echo "#067 - Array Merge, Array Replace, Array Rand, Shuffle<br>";
+
+    /*
+    Array Functions
+
+    - array_merge(Array[Required], Other_Array/s[Optional])
+    --- Merge One Or More Arrays
+    ------ Later Array Key With The Same Name Override The Value Of The Previous One
+    ------ Numeric Key Will Be Renumbered
+
+    - array_replace(Array[Required], Replacement/s[Optional])
+    --- Replaces Elements From Passed Arrays Into The First Array
+    ------ Same Key => Value In Second Array Replace Same Key => Value In First Array
+    ------ If Key In Second Array Not Found In Fisrt Array It Will Be Created
+
+    - array_rand(Array[Required], Num[Optional])
+    --- Pick One Or More Random Keys Out Of An Array
+
+    - shuffle(Array[Required])
+    --- Shuffle An Array
+  */
+
+  $merge_one = ["One" => "PHP", "Two" => "CSS", "Three" => "JavaScript"];
+  $merge_two = ["One" => "HTML", "Four" => "Python"];
+  echo"<pre>merge_one";
+  print_r($merge_one);
+  echo"</pre>";
+  echo"<pre>merge_two";
+  print_r($merge_two);
+  echo"</pre>";
+
+  echo"<pre>array_merge(merge_one,merge_two)";
+  print_r(array_merge($merge_one,$merge_two));
+  echo"</pre>";
+
+
+  
+  $merge_three = [10 => "PHP", 20 => "CSS", 30 => "JavaScript"];
+  $merge_four = [40 => "Python", "10" => "Go"];
+  echo"<pre>merge_three";
+  print_r($merge_three);
+  echo"</pre>";
+  echo"<pre>merge_four";
+  print_r($merge_four);
+  echo"</pre>";
+
+  echo"<pre>array_merge(merge_three,merge_four)";
+  print_r(array_merge($merge_three,$merge_four));
+  echo"</pre>";
+
+  $main = ["One" => "PHP", "Two" => "CSS", "Three" => "JavaScript"];
+  $replace = ["One" => "HTML", "Four" => "Python"];
+  echo"<pre>main";
+  print_r($main);
+  echo"</pre>";
+  echo"<pre>replace";
+  print_r($replace);
+  echo"</pre>";
+  
+  echo"<pre>array_replace(main,replace)";
+  print_r(array_replace($main,$replace));
+  echo"</pre>";
+
+  $nums = ["A", "B", "C", "D"];
+  echo"<pre>nums";
+  print_r($nums);
+  echo"</pre>";
+
+  echo"<pre>array_rand(nums)";
+  print_r(array_rand($nums));
+  echo"</pre>";
+  echo"<pre>nums[array_rand(nums)]";
+  print_r($nums[array_rand($nums)]);
+  echo"</pre>";
+
+  echo"<pre>numsarray_rand(nums,3)";
+  print_r(array_rand($nums,2));
+  echo"</pre>";
+
+  $nums = ["A", "B", "C", "D"];
+  echo"<pre>nums";
+  print_r($nums);
+  echo"</pre>";
+
+  echo"<pre>shuffle(nums)";
+  shuffle($nums);
+  print_r($nums);
+  echo"</pre>";
+
+//   #068 - Array Shift, Array Pop, Array Push, Array Unshift
+echo "#068 - Array Shift, Array Pop, Array Push, Array Unshift<br>";
+
+/*
+    Array Functions
+
+    - array_shift(Array[Required])
+    --- Shift An Element Off The Beginning Of Array
+    --- This Function Will Reset => "reset()" The Input Array Pointer
+
+    - array_pop(Array[Required])
+    --- Pop The Element Off Ehe End Of Array
+    --- This Function Will Reset => "reset()" The Input Array Pointer
+
+    - array_push(Array[Required], Values[Optional])
+    --- Push One Or More Elements Onto The End Of Array
+    --- You Can Use $arr[]
+
+    - array_unshift(Array[Required], Values[Optional])
+    --- Add One Element In The Beginning Of An Array
+    --- This Function Will Reset => "reset()" The Input Array Pointer
+  */
+  $chars = ["A", "B", "C", "D"];
+  echo '<pre>$chars';
+  print_r($chars);
+  echo '</pre>';
+
+  $frist = array_shift($chars);
+  echo '<pre>array_shift($chars);';
+  print_r($frist);
+  echo '</pre>';
+
+  echo '<pre>$chars';
+  print_r($chars);
+  echo '</pre>';
+
+  $last = array_pop($chars);
+  echo '<pre>$last = array_pop($chars)';
+  print_r($last);
+  echo '</pre>';
+
+  echo '<pre>$chars';
+  print_r($chars);
+  echo '</pre>';
+
+  array_push($chars,"G");
+
+  echo '<pre>$chars after => array_push($chars,"G")';
+  print_r($chars);
+  echo '</pre>';
+
+  $chars[]="PP"; // faster
+  echo '<pre>$chars after => $chars[]="PP"';
+  print_r($chars);
+  echo '</pre>';
+
+  array_unshift($chars,"One","Two","Three");
+  echo '<pre>$chars after => array_unshift($chars,"One","Two","Three")';
+  print_r($chars);
+  echo '</pre>';
+
+//   #069 - Array Slice, Array Splice
+echo "#069 - Array Slice, Array Splice<br>";
+/*
+    Array Functions
+
+    - array_slice(Array[Required], Start[Required], Length[Optional], Preserve_Keys[Optional])
+    --- Extract A Slice Of The Array
+    --- Start
+    ------ 0 From Start
+    ------ -1 From Last Element
+    --- Length
+    ------ Negative => Stop Slicing Until This Index
+    ------ Not Set => All Elements From Start Position
+    --- Preserve Keys
+    ------ False => Default => Reset Keys
+    ------ True => Preserve Keys
+    --- If Array Have String Keys, It Will Always Preserve The Keys
+
+    - array_splice(Array[Required], Start[Required], Length[Optional], Array[Optional])
+    --- Remove A Portion Of The Array And Replace It With Something Else
+    --- Start
+    ------ 0 From Start
+    ------ -1 From Last Element
+    --- Length
+    ------ Negative => Stop Removing Until This Index
+    ------ Not Set => Remove All Elements From Start Position
+
+  */
+  
+
+
+  
+
+
 
