@@ -40,3 +40,37 @@ echo "floor(10.9) => ". floor(10.9)."<br>";
 echo "floor(10.2) => ". floor(10.2)."<br>";
 echo "floor(-10.2) => ". floor(-10.2)."<br>";
 
+// #075 - round
+echo "<br>#075 - round<br>";
+echo 'round(5.99) => '.round(5.99) ."<br>";
+echo 'round(5.50) => '.round(5.50) ."<br>";
+echo 'round(5.49) => '.round(5.49) ."<br>";
+echo 'round(5.1) => '.round(5.1) ."<br>";
+
+echo 'round(5.99,1) => '.round(5.99,1) ."<br>";
+echo 'round(5.89,1) => '.round(5.89,1) ."<br>";
+
+echo 'round(5.5,0,PHP_ROUND_HALF_DOWN) => '.round(5.5,0,PHP_ROUND_HALF_DOWN) ."<br>";
+
+// #076 - sqrt, min, max
+echo '<br>#076 - sqrt, min, max<br>';
+echo 'sqrt(16) => '.sqrt(16)."<br>";
+echo 'sqrt(256) => '.sqrt(256)."<br>";
+echo 'sqrt(36) => '.sqrt(36)."<br>";
+
+echo 'min(78,98) => '.min(78,98)."<br>";
+echo 'max(78,98) => '.max(78,98)."<br>";
+
+// #077 - filter_list, filter_id, filter_var
+echo "<br>#077 - filter_list, filter_id, filter_var<br>";
+
+echo "<pre>filter_list()";
+print_r(filter_list());
+echo "</pre>";
+
+echo 'filter_id("boolean") => ' . filter_id("boolean"). "<br>";
+
+$value=true;
+if(filter_var($value,FILTER_VALIDATE_BOOL)){
+    echo '$value is a bool value';
+}
