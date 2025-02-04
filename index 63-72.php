@@ -388,13 +388,206 @@ echo "#069 - Array Slice, Array Splice<br>";
   echo '<pre>array_splice($nums,2,3)';
   print_r(array_splice($nums,2,3));
   echo '</pre>';
-  
+
   echo '<pre>$nums after splice => array_splice($nums,2,3)';
   print_r($nums);
   echo '</pre>';  
 
+//   #070 - Array Functions Part 8 - 7 Sorting Functions
+echo "#070 - Array Functions Part 8 - 7 Sorting Functions<br>";
+/*
+    Array Functions
 
+    - sort(Array[Required], Flag[Optional])
+    --- Sort An Indexed Array In Ascending Order
+
+    - rsort(Array[Required], Flag[Optional])
+    - Sort An Indexing Array In Descending Order
+
+    - asort(Array[Required], Flag[Optional])
+    --- Sort An Associative Array In Ascending Order According To The Value
+
+    - arsort(Array[Required], Flag[Optional])
+    --- Sort An Associative Array In Descending Order According To The Value
+
+    - ksort(Array[Required], Flag[Optional])
+    --- Sort An Associative Array In Ascending Order According To The Key
+
+    - krsort(Array[Required], Flag[Optional])
+    --- Sort An Associative Array In Descending Order According To The Key
+
+    - natsort(Array[Required], Flag[Optional])
+    --- Sorts An Array By Using A "Natural Order" Algorithm
+
+    Practice
+    -- Flags
+    -- Our Own Sorting Function
+
+  */
+  $names = ["Osama", "Ahmed", "Sayed", "Mahmoud", "Sameh", "Gamal"];
+  echo '<pre>$names';
+  print_r($names);
+  echo '</pre>'; 
+  sort($names);
+  echo '<pre>$names => sort($names);';
+  print_r($names);
+  echo '</pre>'; 
+
+  rsort($names);
+  echo '<pre>$names => rsort($names);';
+  print_r($names);
+  echo '</pre>'; 
+
+
+  $countries = ["S" => "Syria", "E" => "Egypt", "I" => "Iraq", "Q" => "Qatar"];
+  echo '<pre>$countries';
+  print_r($countries);
+  echo '</pre>';
+
+  asort($countries);
+  echo '<pre>$countries => asort($countries)';
+  print_r($countries);
+  echo '</pre>';
+
+  arsort($countries);
+  echo '<pre>$countries => arsort($countries)';
+  print_r($countries);
+  echo '</pre>';
+
+
+  $codes = ["1" => "Syria", "3" => "Egypt", "2" => "Iraq", "5" => "Qatar"];
+  echo '<pre>$codes';
+  print_r($codes);
+  echo '</pre>';
+  ksort($codes);
+  echo '<pre>$codes => ksort($codes)';
+  print_r($codes);
+  echo '</pre>';
+
+  $files = ["Photo1.png", "Photo20.png", "Photo3.png"];
+  echo '<pre>$files';
+  print_r($files);
+  echo '</pre>';
+
+  sort($files);
+  echo '<pre>$files => sort($files)';
+  print_r($files);
+  echo '</pre>';
+
+  natsort($files);
+  echo '<pre>$files => natsort($files)';
+  print_r($files);
+  echo '</pre>';
+
+//   #071 - Array Filter, Array Map
+echo "#071 - Array Filter, Array Map<br>";
+
+function add_title($fname,$lname){
+    return "Hello Mr. $fname $lname";
+}
+
+$first_names = ["Osama", "Ahmed", "Sayed", "Mahmoud", "Sameh", "Gamal"];
+$last_names = ["Ameer", "Samy", "Shady", "Amr", "Mohamed", "Ibrahim"];
+echo '<pre>$first_names';
+print_r($first_names);
+echo '</pre>';
+echo '<pre>$last_names';
+print_r($last_names);
+echo '</pre>';
+
+echo '<pre>array_map("add_title",$first_names,$lname)';
+print_r(array_map("add_title",$first_names,$last_names));
+echo '</pre>';
   
+echo '<pre> print_r(array_map(fn($fname,$lname) => "Hello Mr. $fname $lname",$first_names,$lname)';
+print_r(array_map(fn($f,$l) => "Hello Mr. $f $l",$first_names,$last_names));
+echo '</pre>';
+
+$nums = [
+    1 => 3,
+    6 => 1,
+    3 => 2,
+    4 => 8,
+    5 => 4
+  ];
+  echo '<pre>$nums';
+  print_r($nums);
+  echo '</pre>';
+
+  echo '<pre>array_filter($nums,fn($n)=>$n>4)';
+  print_r(array_filter($nums,fn($n)=>$n>4));
+  echo '</pre>';
+
+  echo '<pre>array_filter($nums,fn($n)=>$n>4,ARRAY_FILTER_USE_KEY))';
+  print_r(array_filter($nums,fn($n)=>$n>4,ARRAY_FILTER_USE_KEY));
+  echo '</pre>';
+
+  echo '<pre>array_filter($nums,fn($n)=>$n>4,ARRAY_FILTER_USE_BOTH)';
+  print_r(array_filter($nums,fn($n)=>$n>4,ARRAY_FILTER_USE_BOTH));
+  echo '</pre>';
+
+//    #072 - Array Reduce
+echo " #072 - Array Reduce<br>";
+/*
+    Array Functions
+
+    - array_reduce(Array[Required], Callback Function[Required], Initial_Value[Optional])
+    --- Reduce The Array To A Single Value
+    --- Carry => The Value Of The Previous Iteration || Initial Value
+    --- Item => The Value Of The Current Iteration
+
+  */
+  function add($carry, $item) {
+    echo "$carry<br>";
+    echo "$item<br>";
+    echo $carry + $item . "<br>";
+    echo "###########<br>";
+    return $carry + $item;
+  }
+
+  $nums = [10, 20, 50, 100, 10];
+  echo 'array_reduce($nums,"add") => '. array_reduce($nums,"add")."<br>";
+
+$nums = [10, 20, 50, 100, 10];
+echo 'array_reduce($nums,"add",100) => '. array_reduce($nums,"add",100)."<br>";
 
 
+// 1
+echo "التكليفات<br>";
 
+echo "التكليف1<br>";
+$friends = [
+    "AG" => "Ahmed Gamal",
+    "OM" => "Osama Mohamed",
+    "MG" => "Mahmoud Gamal",
+    "AS" => "Ahmed Samy",
+    "FA" => "Farid Ahmed",
+    "SM" => "Sayed Mohamed"
+  ];
+  
+  echo '<pre>array_chunk($friends,2,true)';
+  print_r(array_chunk($friends,2,true));
+  echo '</pre>';
+
+
+//   2
+echo "التكليف2<br>";
+$codes = ["H", "C", "J"];
+$means = ["HTML", "CSS", "JavaScript"];
+
+echo '<pre>';
+print_r(array_combine($codes,$means));
+echo '</pre>';
+
+// 3 
+echo "التكليف3<br>";
+$friends = [
+    "Ahmed Gamal" => "AG",
+    "Osama Mohamed" => "OM",
+    "Mahmoud Gamal" => "MG",
+    "Ahmed Samy" => "AS"
+  ];
+
+echo"<pre>array_flip";
+print_r(array_flip(array_reverse($friends)));
+echo"</pre>";
