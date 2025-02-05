@@ -74,3 +74,27 @@ $value=true;
 if(filter_var($value,FILTER_VALIDATE_BOOL)){
     echo '$value is a bool value';
 }
+
+// #078 - filter_var Validate Filters Part 1
+echo '<br>#078 - filter_var Validate Filters Part 1<br>';
+$bool = "YEs";
+echo '$bool = "YEs => ';
+var_dump(filter_var($bool,FILTER_VALIDATE_BOOL));
+
+$bool = "False";
+echo '<br>$bool = "False" => ';
+var_dump(filter_var($bool,FILTER_VALIDATE_BOOL,FILTER_NULL_ON_FAILURE));
+
+$bool = "fdd";
+echo '<br>$bool = "fdd" => ';
+var_dump(filter_var($bool,FILTER_VALIDATE_BOOL,FILTER_NULL_ON_FAILURE));
+
+$url = "https://chatgpt.com";
+echo '<br>$url = "https://chatgpt.com" => ';
+var_dump(filter_var($url,FILTER_VALIDATE_URL));
+
+$ip = "192.168.2.1";
+echo '<br>$ip = "192.168.2.1" => ';
+
+var_dump(filter_var($ip, FILTER_VALIDATE_IP, ["flags" => FILTER_NULL_ON_FAILURE | FILTER_FLAG_IPV4]));
+
